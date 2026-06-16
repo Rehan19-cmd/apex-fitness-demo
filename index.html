@@ -416,12 +416,17 @@
       .hs-item:nth-child(3), .hs-item:nth-child(4) { border-bottom: none; }
       .hs-num { font-size: 1.5rem; }
 
-      /* VIDEO SCROLL LABELS */
+      /* VIDEO SCROLL — show full 16:9 frame (no crop) on phones */
+      #video-sticky { background: #080808; }
+      #gym-video { object-fit: contain; }
       .vid-label { font-size: 0.85rem; padding: 7px 16px; letter-spacing: 2px; }
       .vid-label.before { left: 14px; }
       .vid-label.after  { right: 14px; }
       .vc h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
       .vc p  { font-size: 0.9rem; padding: 0 20px; }
+      /* keep before/after labels & captions hugging the visible video band */
+      .vid-label { top: 50%; }
+      .vid-captions { bottom: auto; top: calc(50% + 30vw); }
 
       /* MARQUEE */
       #marquee { padding: 14px 0; }
